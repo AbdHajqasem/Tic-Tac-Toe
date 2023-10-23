@@ -1,4 +1,5 @@
 import "./EnterPlayerName.scss";
+import TicTacToeBoard from "../Tic_tac_toe_board/TicTacToeBoard";
 import { useState, useRef } from "react";
 const EnterPlayerName = () => {
   const [playersInfo, setPlayersInfo] = useState([]);
@@ -49,6 +50,7 @@ const EnterPlayerName = () => {
           </div>
         </form>
       )}
+      {playersInfo.length == 2 && <TicTacToeBoard playersInfo={playersInfo} />}
     </>
   );
 };
