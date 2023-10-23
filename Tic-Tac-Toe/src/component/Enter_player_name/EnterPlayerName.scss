@@ -1,0 +1,64 @@
+$redColor: red;
+$blueColor: blue;
+$darkRedColor: rgb(100, 8, 8);
+$darkBlueColor: rgb(9, 9, 99);
+
+.playersnamecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .playername {
+        padding: 5px;
+        width: 240px;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .savebtnred,
+    .savebtnblue {
+        width: 120px;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        margin-top: 10px;
+        transition: 0.7s ease;
+
+        &.savebtnred {
+            background-color: $redColor;
+
+            &:hover {
+                background-color: $darkRedColor;
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+
+        &.savebtnblue {
+            background-color: $blueColor;
+
+            &:hover {
+                background-color: $darkBlueColor;
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .errorcontainer {
+        width: 240px;
+        padding: 5px;
+        font-size: 12px;
+        color: $redColor;
+        display: flex;
+
+        .error {
+            margin-top: -6px;
+        }
+    }
+}
