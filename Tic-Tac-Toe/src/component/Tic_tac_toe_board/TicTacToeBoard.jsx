@@ -1,4 +1,5 @@
 import "./TicTacToeBoard.scss";
+import Cell from "../Cell/Cell";
 import { useState } from "react";
 const TicTacToeBoard = (prop) => {
   const [playerName, setplayerName] = useState(prop.playersInfo[0].name);
@@ -20,6 +21,19 @@ const TicTacToeBoard = (prop) => {
           </span>{" "}
           turn
         </h2>
+      </div>
+      <div className="board">
+        <Cell
+          playerName={playerName}
+          setplayerName={setplayerName}
+          playersInfo={prop.playersInfo}
+          player1Result={player1Result}
+          setPlaye1Result={setPlaye1Result}
+          player2Result={player2Result}
+          setPlayer2Result={setPlayer2Result}
+          tieResult={tieResult}
+          setTieResult={setTieResult}
+        />
       </div>
     </>
   );
