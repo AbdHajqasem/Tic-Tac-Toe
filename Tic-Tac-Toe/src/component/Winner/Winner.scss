@@ -1,0 +1,45 @@
+$background-color: #242424;
+$winner-container-bg: #ccc;
+$reset-button-bg: #ccc;
+$reset-button-hover-color: green;
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  color: black;
+
+  .winnercontainer {
+    background-color: $winner-container-bg;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 350px;
+
+    .reset {
+      border: none;
+      background-color: #ccc;
+      margin-bottom: 8px;
+
+      #reset:hover {
+        color: green;
+        transition: 0.7s ease;
+      }
+
+      #reset:active {
+        transform: scale(0.9);
+        transition: 0.7s ease;
+      }
+    }
+
+  }
+}
