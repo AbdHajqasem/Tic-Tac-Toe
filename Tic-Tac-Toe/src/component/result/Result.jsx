@@ -1,9 +1,13 @@
 import "./Result.scss";
 const Result = (prop) => {
+  let arr = [
+    { name: prop.playersInfo[0].name, result: prop.playersResult[0] },
+    { name: prop.playersInfo[1].name, result: prop.playersResult[1] },
+  ];
   return (
     <>
       <div className="resultcontainer">
-        {prop.playersInfo.map((player, index) => (
+        {arr.map((player, index) => (
           <p
             key={index}
             style={{
@@ -11,8 +15,7 @@ const Result = (prop) => {
               color: index === 0 ? "red" : "blue",
             }}
           >
-            {player.name}:{" "}
-            {index === 0 ? prop.playersResult[0] : prop.playersResult[1]}
+            {player.name}: {player.result}
           </p>
         ))}
 
