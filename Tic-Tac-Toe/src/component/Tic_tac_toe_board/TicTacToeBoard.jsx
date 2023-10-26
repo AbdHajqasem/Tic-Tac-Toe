@@ -4,8 +4,7 @@ import Result from "../result/Result";
 import { useState } from "react";
 const TicTacToeBoard = (prop) => {
   const [playerName, setplayerName] = useState(prop.playersInfo[0].name);
-  const [player1Result, setPlaye1Result] = useState(0);
-  const [player2Result, setPlayer2Result] = useState(0);
+  const [playersResult, setPlayersResult] = useState([0, 0]);
   const [tieResult, setTieResult] = useState(0);
   return (
     <>
@@ -28,10 +27,8 @@ const TicTacToeBoard = (prop) => {
           playerName={playerName}
           setplayerName={setplayerName}
           playersInfo={prop.playersInfo}
-          player1Result={player1Result}
-          setPlaye1Result={setPlaye1Result}
-          player2Result={player2Result}
-          setPlayer2Result={setPlayer2Result}
+          playersResult={playersResult}
+          setPlayersResult={setPlayersResult}
           tieResult={tieResult}
           setTieResult={setTieResult}
         />
@@ -39,10 +36,8 @@ const TicTacToeBoard = (prop) => {
       <Result
         playerName={playerName}
         playersInfo={prop.playersInfo}
-        player1Result={player1Result}
-        setPlaye1Result={setPlaye1Result}
-        player2Result={player2Result}
-        setPlayer2Result={setPlayer2Result}
+        playersResult={playersResult}
+        setPlayersResult={setPlayersResult}
         tieResult={tieResult}
         setTieResult={setTieResult}
       />
